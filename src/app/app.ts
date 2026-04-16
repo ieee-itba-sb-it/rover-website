@@ -1,12 +1,39 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('rover-website');
+  title = signal('Titulo Rover');
+  subtitle = signal('Subtitulo Rover');
+
+  features = signal([
+    {
+      title: 'Locomocion y chasis',
+      text: 'Descripcion.',
+    },
+    {
+      title: 'Brazo manipulador y drilling',
+      text: 'Descripcion.',
+    },
+    {
+      title: 'Electronica y sistemas de potencia',
+      text: 'Descripcion.',
+    },
+    {
+      title: 'Telecomunicaciones',
+      text: 'Descripcion.',
+    },
+    {
+      title: 'Software y autonomia',
+      text: 'Descripcion.',
+    },
+    {
+      title: 'Ciencia',
+      text: 'Descripcion.',
+    },
+  ]);
 }

@@ -1,0 +1,53 @@
+.hero {
+  height: 90vh;
+  /* background-image: url('/rover.jpg'); */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  color: white;
+  margin-left: 8%;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+}
+
+.info {
+  padding: 4rem 8%;
+}
+
+.equipos {
+  padding: 4rem 8%;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.extra {
+  padding: 4rem 8%;
+}
+
+
