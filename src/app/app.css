@@ -31,6 +31,15 @@
   padding: 4rem 8%;
 }
 
+.timer-content{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+  margin-top: 350px;
+}
+
 .equipos {
   padding: 4rem 8%;
 }

@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { CountdownComponent } from './countdown/countdown';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [CountdownComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
