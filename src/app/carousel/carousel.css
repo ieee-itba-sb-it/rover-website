@@ -1,118 +1,67 @@
-/* Asegurate de tener estas importaciones en tu styles.css global o angular.json */
-/* @import "primeng/resources/themes/lara-light-blue/theme.css"; */
-/* @import "primeng/resources/primeng.min.css"; */
-/* @import "primeicons/primeicons.css"; */
-
-/* --- Estilos Generales del Contenedor --- */
-:host {
-  display: block;
-  margin: 3rem 0; /* Margen superior e inferior para separar del resto */
-  padding: 0 5%; /* Padding lateral para que no toque los bordes de la pantalla */
-}
-
-/* Título de la sección del carrusel */
-.carousel-section-title {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 2.25rem;
-  color: #1a1a1a;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* --- Estilos de la Tarjeta (Slide) --- */
+/* Contenedor del ítem */
 .feature-card {
-  background: var(--surface-card, #ffffff);
-  border: 1px solid var(--surface-border, #e5e7eb);
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  margin: 1rem; /* Margen entre tarjetas (¡Crucial!) */
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 280px; /* Altura mínima uniforme */
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Sombra suave */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 1.5rem 1rem;
   text-align: center;
-}
-
-/* Efecto Hover: Elevación, color de borde y sombra */
-.feature-card:hover {
-  transform: translateY(-8px); /* Elevación */
-  border-color: #007ad9; /* Color de PrimeNG / Azul ITBA */
-  box-shadow: 0 12px 24px rgba(0, 122, 217, 0.12); /* Sombra de color */
-}
-
-/* --- Estilos del Icono de la Tarjeta --- */
-.card-icon {
-  background-color: rgba(0, 122, 217, 0.08); /* Fondo suave del icono */
-  color: #007ad9;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border: 2px solid rgba(0, 122, 217, 0.2);
-}
-
-/* --- Estilos del Texto de la Tarjeta --- */
-.card-content {
-  flex: 1; /* Ocupa el espacio restante */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Efecto al pasar el mouse */
+.feature-card:hover {
+  transform: translateY(-12px);
+  border-color: #007ad9;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .feature-title {
-  color: #111827;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem 0;
-  text-transform: capitalize; /* Capitaliza la primera letra */
-  letter-spacing: 0.3px;
+  font-family: 'Orbitron', sans-serif;
+  color: #0f172a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-text {
-  color: #6b7280;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  margin: 0;
+  color: #64748b;
+  font-size: 1rem;
 }
 
-/* --- Personalización de los Botones de Navegación de PrimeNG --- */
+/* Estilos para las flechas y puntos de PrimeNG */
 :host ::v-deep .p-carousel-prev,
 :host ::v-deep .p-carousel-next {
-  background-color: #ffffff;
-  border: 1px solid #dfe7ef;
+  width: 50px;
+  height: 50px;
+  background: white;
   color: #007ad9;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: all 0.2s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin: 0 0.5rem;
 }
 
 :host ::v-deep .p-carousel-prev:hover,
 :host ::v-deep .p-carousel-next:hover {
-  background-color: #007ad9;
-  color: #ffffff;
-  border-color: #007ad9;
+  background: #007ad9;
+  color: white;
 }
 
-/* Personalización de los indicadores (puntos) */
-:host ::v-deep .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-  background-color: #007ad9;
+:host ::v-deep .p-carousel-indicators .p-link {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cbd5e1;
 }
 
-:host ::v-deep .p-carousel-indicators .p-carousel-indicator button {
-  background-color: rgba(0, 122, 217, 0.2);
-  width: 10px;
-  height: 10px;
-  margin: 0 3px;
+:host ::v-deep .p-carousel-indicators .p-highlight .p-link {
+  background: #007ad9;
 }

@@ -1,3 +1,13 @@
+/* Importamos fuentes: Orbitron para títulos tecnológicos e Inter para lectura clara */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+:host {
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
 .hero {
   height: 90vh;
   background-image: url('/assets/rover-principal.PNG');
@@ -7,56 +17,115 @@
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4); /* Un poco más claro para que luzca la imagen */
   height: 100%;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(2px); /* Efecto sutil de desenfoque al fondo */
 }
 
 .hero-content {
   color: white;
   margin-left: 8%;
-  max-width: 600px;
+  max-width: 700px;
+  z-index: 2;
 }
 
 .hero-content h1 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
 }
 
-.info {
-  padding: 4rem 8%;
+/* --- Botón "Conocé más" --- */
+.hero-content button {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  border: 2px solid #007ad9; /* Azul PrimeNG/ITBA */
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
-.timer-content{
+.hero-content button:hover {
+  background: #007ad9;
+  box-shadow: 0 0 25px rgba(0, 122, 217, 0.5);
+  transform: translateY(-3px);
+}
+
+/* --- Timer / Countdown --- */
+.timer-content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 150px;
-  margin-top: 350px;
+  padding-left: 50px; /* Ajustado para mejor equilibrio */
+  margin-top: 150px; /* Bajado para no chocar con el título */
 }
 
-.equipos {
-  padding: 4rem 8%;
+/* --- Secciones de Contenido (Info y Features) --- */
+.info, .robot-features, .extra {
+  padding: 6rem 8%;
 }
 
-.cards {
-  display: flex;
-  gap: 1rem;
+.info h2, .robot-features h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 2.5rem;
+  position: relative;
 }
 
-.card {
-  background: #eee;
-  padding: 1rem;
+/* Línea decorativa estilo ingeniería */
+.info h2::after, .robot-features h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 80px;
+  height: 5px;
+  background: #007ad9;
   border-radius: 10px;
 }
 
-.extra {
-  padding: 4rem 8%;
+.info p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #475569;
+  max-width: 900px;
 }
 
+/* --- Sección de Equipos/Cards (Si no usás el carrusel en alguna parte) --- */
+.cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
 
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}

@@ -4,20 +4,12 @@
   [numScroll]="1"
   [circular]="true"
   [responsiveOptions]="responsiveOptions"
-  autoplayInterval="4000"
-  class="custom-carousel"> <ng-template pTemplate="header">
-  <h2 class="carousel-section-title">Nuestras Áreas de Desarrollo</h2>
-</ng-template>
+  autoplayInterval="3000">
 
   <ng-template pTemplate="item" let-feature>
     <div class="feature-card">
-      <div class="card-icon">
-        <i class="pi pi-cog"></i>
-      </div>
-      <div class="card-content">
-        <h4 class="feature-title">{{ feature.title }}</h4>
-        <p class="feature-text">{{ feature.text }}</p>
-      </div>
+      <h4 class="feature-title">{{ feature.title }}</h4>
+      <p class="feature-text">{{ feature.text }}</p>
     </div>
   </ng-template>
 </p-carousel>
