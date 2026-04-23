@@ -1,0 +1,15 @@
+<p-carousel
+  [value]="items()"
+  [numVisible]="3"
+  [numScroll]="1"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions"
+  autoplayInterval="3000">
+
+  <ng-template pTemplate="item" let-feature>
+    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+      <h4 class="mb-1">{{ feature.title }}</h4>
+      <p>{{ feature.text }}</p>
+    </div>
+  </ng-template>
+</p-carousel>

@@ -18,15 +18,9 @@
   </p>
 </section>
 
-<section class="equipos">
-  <h2>Conoce nuestros equipos</h2>
-  <div class="cards">
-    @for (feature of features(); track feature.title) {
-      <article class="card">
-        <h3>{{ feature.title }}</h3>
-        <p>{{ feature.text }}</p>
-      </article>
-    }
-  </div>
+<section class="robot-features">
+  <h2>Nuestras Áreas</h2>
+
+  <app-carousel [items]="features()"></app-carousel>
 </section>
 
