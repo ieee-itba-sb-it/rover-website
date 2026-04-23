@@ -1,44 +1,88 @@
+/* --- Estilo Tecnológico para el Countdown --- */
+
 .countdown-wrapper {
   text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  /* Fondo oscuro semitransparente para que no tape el Rover */
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.label {
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  color: #fff;
+.label p {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: #007ad9; /* Azul tecnológico */
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 122, 217, 0.5);
 }
 
 .grid {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
 }
 
 .unit {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  padding: 15px;
-  min-width: 80px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  /* Fondo oscuro tipo cristal */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px 10px;
+  min-width: 100px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo al pasar el mouse */
+.unit:hover {
+  background: rgba(0, 122, 217, 0.1);
+  border-color: #007ad9;
+  transform: translateY(-5px);
 }
 
 .unit span {
   display: block;
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: #333;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 5px;
+  /* Brillo en los números */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .unit p {
   margin: 0;
-  font-size: 0.7rem;
-  color: #777;
-  font-weight: bold;
+  font-size: 0.65rem;
+  color: #94a3b8; /* Gris azulado claro */
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Decoración extra: pequeños bordes en las esquinas */
+.unit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #007ad9;
+  border-left: 2px solid #007ad9;
 }
 
 .footer {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 0.8rem;
-  color: #666;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
 }
