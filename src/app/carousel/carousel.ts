@@ -6,6 +6,7 @@ import { CarouselModule } from 'primeng/carousel';
   standalone: true,
   imports: [CarouselModule],
   templateUrl: './carousel.html',
+  styleUrl: './carousel.css',
 })
 export class CarouselComponent {
   // Definimos el input como un signal

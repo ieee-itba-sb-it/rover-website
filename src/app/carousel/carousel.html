@@ -7,9 +7,11 @@
   autoplayInterval="3000">
 
   <ng-template pTemplate="item" let-feature>
-    <div class="feature-card">
-      <h4 class="feature-title">{{ feature.title }}</h4>
-      <p class="feature-text">{{ feature.text }}</p>
+    <div class="feature-card-shell">
+      <article class="feature-card">
+        <h4 class="feature-title">{{ feature.title }}</h4>
+        <p class="feature-text">{{ feature.text }}</p>
+      </article>
     </div>
   </ng-template>
 </p-carousel>

@@ -1,17 +1,25 @@
 /* --- Estilos para el Carrusel Tecnológico --- */
 
+.feature-card-shell {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.25rem 0.5rem;
+}
+
 .feature-card {
   /* Cambio a fondo oscuro semitransparente (estilo panel de control) */
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(8px); /* Efecto vidrio */
-  border: 1px solid rgba(0, 122, 217, 0.3); /* Borde azul sutil */
-  border-radius: 24px;
-  padding: 3rem 2rem;
+  background: #0b63ce;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
   margin: 1.5rem 1rem;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  min-height: 350px;
+  box-shadow: 0 12px 24px rgba(8, 42, 87, 0.28);
+  min-height: 240px;
+  width: min(320px, 100%);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,19 +40,18 @@
 }
 
 .feature-card:hover {
-  transform: translateY(-15px) scale(1.02);
-  border-color: #007ad9;
-  background: rgba(15, 23, 42, 0.9);
-  box-shadow: 0 20px 40px rgba(0, 122, 217, 0.25);
+  transform: translateY(-6px);
+  background: #0a57b5;
+  box-shadow: 0 18px 30px rgba(8, 42, 87, 0.34);
 }
 
 .feature-title {
   font-family: 'Orbitron', sans-serif;
   color: #ffffff; /* Texto blanco para resaltar sobre el fondo oscuro */
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
+  margin: 0 0 0.9rem;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   border-bottom: 2px solid rgba(0, 122, 217, 0.5);
   padding-bottom: 0.5rem;
@@ -53,16 +60,23 @@
 }
 
 .feature-text {
-  color: #cbd5e1; /* Gris claro para mejor lectura */
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 300;
+  color: #e9f3ff;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Centra cada item renderizado por PrimeNG */
+:host ::ng-deep .p-carousel-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* --- Ajuste de Navegación de PrimeNG --- */
 
-:host ::v-deep .p-carousel-prev,
-:host ::v-deep .p-carousel-next {
+:host ::ng-deep .p-carousel-prev,
+:host ::ng-deep .p-carousel-next {
   width: 55px;
   height: 55px;
   background: rgba(30, 41, 59, 0.7); /* Botones oscuros */
@@ -74,15 +88,15 @@
   transition: all 0.3s ease;
 }
 
-:host ::v-deep .p-carousel-prev:hover,
-:host ::v-deep .p-carousel-next:hover {
+:host ::ng-deep .p-carousel-prev:hover,
+:host ::ng-deep .p-carousel-next:hover {
   background: #007ad9;
   color: white;
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(0, 122, 217, 0.5);
 }
 
-:host ::v-deep .p-carousel-indicators .p-link {
+:host ::ng-deep .p-carousel-indicators .p-link {
   width: 30px; /* Indicadores alargados tipo "dash" */
   height: 4px;
   border-radius: 2px;
@@ -90,7 +104,7 @@
   transition: all 0.3s;
 }
 
-:host ::v-deep .p-carousel-indicators .p-highlight .p-link {
+:host ::ng-deep .p-carousel-indicators .p-highlight .p-link {
   background: #007ad9;
   width: 50px;
   box-shadow: 0 0 10px rgba(0, 122, 217, 0.8);
