@@ -3,7 +3,7 @@
     <div class="hero-content">
       <h1>{{ title() }}</h1>
       <p>{{ subtitle() }}</p>
-      <button>Conocé más</button> <!-- // aca queremos que el boton nos lleve a la seccion info (abajo)  !-->
+      <button type="button" (click)="infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' })">Conocé más</button>
     </div>
     <div class="timer-content">
       <app-countdown></app-countdown>
@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section class="info">
+<section class="info" id="info-section" #infoSection>
   <h2>Sobre el proyecto</h2>
   <p>
     Descripcion del proyecto.
