@@ -1,13 +1,21 @@
 <section class="hero">
   <div class="overlay">
+
+    <!-- Título -->
     <div class="hero-content">
       <h1>{{ title() }}</h1>
-      <p>{{ subtitle() }}</p>
-      <button type="button" (click)="infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' })">Conocé más</button>
     </div>
+
+    <!-- Bloque de Contador (Bajado con margen) -->
     <div class="timer-content">
       <app-countdown></app-countdown>
     </div>
+
+    <!-- Botón (Ahora debajo de todo) -->
+    <button type="button" class="btn-main" (click)="infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' })">
+      Conocé más
+    </button>
+
   </div>
 </section>
 

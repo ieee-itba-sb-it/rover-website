@@ -11,8 +11,6 @@ import { CarouselComponent } from './carousel/carousel';
 })
 export class App {
   title = signal('Titulo Rover');
-  subtitle = signal('Subtitulo Rover');
-
 
   features = signal([
     {

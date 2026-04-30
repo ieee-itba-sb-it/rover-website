@@ -1,10 +1,7 @@
-/* Importamos fuentes: Orbitron para títulos tecnológicos e Inter para lectura clara */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 :host {
-  font-family: 'Inter', sans-serif;
-  color: #1e293b;
-  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* --- Hero Section --- */
@@ -17,27 +14,30 @@
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.4); /* Un poco más claro para que luzca la imagen */
+  background: rgba(0, 0, 0, 0.4);
   height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  backdrop-filter: blur(2px); /* Efecto sutil de desenfoque al fondo */
+  text-align: center;
+  backdrop-filter: blur(2px);
 }
 
 .hero-content {
   color: white;
-  margin-left: 8%;
-  max-width: 700px;
-  z-index: 2;
+  max-width: 800px;
+  /* Espacio debajo del título */
+  margin-bottom: 2rem;
 }
 
 .hero-content h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 800; /* Extra Bold estilo IEEE */
   line-height: 1.1;
-  margin-bottom: 1rem;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  letter-spacing: -2px;
 }
 
 .hero-content p {
@@ -70,12 +70,13 @@
 
 /* --- Timer / Countdown --- */
 .timer-content {
-  flex: 1;
+  flex: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 50px; /* Ajustado para mejor equilibrio */
-  margin-top: 50px; /* Bajado para no chocar con el título */
+  /* Aumenta este margen para bajar más el contador */
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 /* --- Secciones de Contenido (Info y Features) --- */
@@ -84,7 +85,7 @@
 }
 
 .info h2, .robot-features h2 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   color: #0f172a;
   margin-bottom: 2.5rem;
@@ -128,4 +129,27 @@
 
 .card:hover {
   transform: translateY(-10px);
+}
+
+.btn-main {
+  padding: 1rem 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: transparent;
+  /* Color naranja IEEE si quieres, o el azul que tenías */
+  border: 2px solid #007ad9;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background: #007ad9;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(251, 176, 59, 0.5);
+  transform: translateY(-3px);
 }
