@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, signal } from '@angular/core';
 import { CountdownComponent } from './countdown/countdown';
 import { CarouselComponent } from './carousel/carousel';
 
@@ -9,10 +9,32 @@ import { CarouselComponent } from './carousel/carousel';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
+export class App implements AfterViewInit {
+  private el = inject(ElementRef);
+
   title = signal('Titulo Rover');
   subtitle = signal('Subtitulo Rover');
 
+  ngAfterViewInit() {
+    const section = this.el.nativeElement.querySelector('.vision-banner');
+
+    if (!section) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
+        }
+      },
+      { threshold: 0.9 },
+    );
+
+    observer.observe(section);
+  }
 
   features = signal([
     {

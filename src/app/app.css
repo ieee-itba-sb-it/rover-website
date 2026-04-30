@@ -21,7 +21,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(2px); /* Efecto sutil de desenfoque al fondo */
+  /*backdrop-filter: blur(2px); /* Efecto sutil de desenfoque al fondo */
 }
 
 .hero-content {
@@ -84,7 +84,7 @@
 }
 
 .info h2, .robot-features h2 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
   color: #0f172a;
   margin-bottom: 2.5rem;
@@ -128,4 +128,109 @@
 
 .card:hover {
   transform: translateY(-10px);
+}
+
+.vision-banner {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  /* Fondo azul oscuro, pero menos negro */
+  background: linear-gradient(
+    135deg,
+    #001233 0%,
+    #001845 45%,
+    #002855 75%,
+    #003566 100%
+  );
+
+  color: white;
+
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Franja azul más clara grande */
+.vision-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 75%;
+  height: 100%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(30, 64, 175, 0.65),
+    rgba(37, 99, 235, 0.35),
+    rgba(0, 53, 102, 0)
+  );
+
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+
+  transform: translateX(180px);
+  opacity: 0;
+
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+}
+
+/* Glow suave encima de la franja */
+.vision-banner::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: 5%;
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.4),
+    transparent 65%
+  );
+
+  filter: blur(80px);
+
+  transform: translateX(120px);
+  opacity: 0;
+
+  transition:
+    transform 1.2s ease,
+    opacity 1.2s ease;
+}
+
+/* Cuando el banner entra en pantalla */
+.vision-banner.visible::before {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.vision-banner.visible::after {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Contenido */
+.vision-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 90px 8%;
+}
+
+.vision-label {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.vision-content h2 {
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  line-height: 1.3;
+  font-weight: 700;
+  max-width: 800px;
 }
