@@ -1,11 +1,12 @@
 import { AfterViewInit, Component, ElementRef, inject, signal } from '@angular/core';
 import { CountdownComponent } from './countdown/countdown';
 import { CarouselComponent } from './carousel/carousel';
+import { FooterComponent } from './footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CountdownComponent, CarouselComponent],
+  imports: [CountdownComponent, CarouselComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
