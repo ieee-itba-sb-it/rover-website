@@ -1,5 +1,5 @@
-/* Importamos fuentes: Orbitron para títulos tecnológicos e Inter para lectura clara */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+/* Importamos fuentes: Inter para lectura clara */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@400&display=swap');
 
 :host {
   font-family: 'Inter', sans-serif;
