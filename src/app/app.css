@@ -7,21 +7,19 @@
   overflow-x: hidden;
 }
 
-/* --- Hero Section --- */
 .hero {
   height: 90vh;
-  background-image: url('/assets/rover-principal.PNG');
+  background-image: url('/assets/banner.png');
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.4); /* Un poco más claro para que luzca la imagen */
+  background: rgba(0, 0, 0, 0.4);
   height: 100%;
   display: flex;
   align-items: center;
-  /*backdrop-filter: blur(2px); /* Efecto sutil de desenfoque al fondo */
 }
 
 .hero-content {
@@ -47,14 +45,14 @@
   opacity: 0.95;
 }
 
-/* --- Botón "Conocé más" --- */
+
 .hero-content button {
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
   background: transparent;
-  border: 2px solid #007ad9; /* Azul PrimeNG/ITBA */
+  border: 2px solid #007ad9;
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
@@ -68,17 +66,19 @@
   transform: translateY(-3px);
 }
 
-/* --- Timer / Countdown --- */
+
 .timer-content {
-  flex: 1;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-left: 50px; /* Ajustado para mejor equilibrio */
-  margin-top: 50px; /* Bajado para no chocar con el título */
+  z-index: 3;
 }
 
-/* --- Secciones de Contenido (Info y Features) --- */
+
 .info, .robot-features, .extra {
   padding: 6rem 8%;
 }
@@ -91,7 +91,7 @@
   position: relative;
 }
 
-/* Línea decorativa estilo ingeniería */
+
 .info h2::after, .robot-features h2::after {
   content: '';
   position: absolute;
@@ -110,7 +110,6 @@
   max-width: 900px;
 }
 
-/* --- Sección de Equipos/Cards (Si no usás el carrusel en alguna parte) --- */
 .cards {
   display: flex;
   gap: 2rem;
@@ -137,7 +136,7 @@
   align-items: center;
   overflow: hidden;
 
-  /* Fondo azul oscuro, pero menos negro */
+
   background: linear-gradient(
     135deg,
     #001233 0%,
@@ -151,7 +150,7 @@
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 }
 
-/* Franja azul más clara grande */
+
 .vision-banner::before {
   content: "";
   position: absolute;
@@ -177,7 +176,7 @@
     opacity 1s ease;
 }
 
-/* Glow suave encima de la franja */
+
 .vision-banner::after {
   content: "";
   position: absolute;
@@ -202,7 +201,7 @@
     opacity 1.2s ease;
 }
 
-/* Cuando el banner entra en pantalla */
+
 .vision-banner.visible::before {
   transform: translateX(0);
   opacity: 1;
@@ -213,7 +212,7 @@
   opacity: 1;
 }
 
-/* Contenido */
+
 .vision-content {
   position: relative;
   z-index: 2;
