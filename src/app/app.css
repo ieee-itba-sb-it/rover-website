@@ -26,15 +26,26 @@
   color: white;
   margin-left: 8%;
   max-width: 700px;
-  z-index: 2;
+  position: relative;
+  z-index: 4;
+  /* Hacemos que la caja invisible deje "pasar" el mouse a través de ella */
+  pointer-events: none;
+}
+
+/* Le devolvemos la interacción solo a los elementos que tienen que ser clickeables o seleccionables */
+.hero-content h1,
+.hero-content .hero-logo,
+.hero-content button {
+  pointer-events: auto;
 }
 
 .hero-content h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 5rem;
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  line-height: 1; /* Lo bajamos a 1 para sacar el espacio invisible del texto */
+  margin-top: 0;
+  margin-bottom: 0; /* Pegamos el título directo a lo que sigue */
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -233,3 +244,37 @@
   font-weight: 700;
   max-width: 800px;
 }
+
+.vision-content .donate-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #001233; /* Color oscuro para contrastar con el fondo claro del botón */
+  background: #ffffff; /* Fondo blanco para que resalte */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vision-content .donate-btn:hover {
+  background: #007ad9; /* Azul de tu paleta */
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 122, 217, 0.6);
+  transform: translateY(-3px);
+}
+
+.hero-content .hero-logo {
+  max-width: 200px;
+  height: auto;
+  margin-top: 0.5rem; /* Solo una mínima separación con el título */
+  margin-bottom: 1rem; /* Poca separación antes del botón */
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+

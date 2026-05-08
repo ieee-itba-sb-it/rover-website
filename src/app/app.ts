@@ -1,70 +1,70 @@
-import { AfterViewInit, Component, ElementRef, inject, signal } from '@angular/core';
-import { CountdownComponent } from './countdown/countdown';
-import { CarouselComponent } from './carousel/carousel';
-import { FooterComponent } from './footer/footer';
+  import { AfterViewInit, Component, ElementRef, inject, signal } from '@angular/core';
+  import { CountdownComponent } from './countdown/countdown';
+  import { CarouselComponent } from './carousel/carousel';
+  import { FooterComponent } from './footer/footer';
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CountdownComponent, CarouselComponent, FooterComponent],
-  templateUrl: './app.html',
-  styleUrl: './app.css',
-})
-export class App implements AfterViewInit {
-  private el = inject(ElementRef);
+  @Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [CountdownComponent, CarouselComponent, FooterComponent],
+    templateUrl: './app.html',
+    styleUrl: './app.css',
+  })
+  export class App implements AfterViewInit {
+    private el = inject(ElementRef);
 
-  title = signal('Titulo Rover');
-  subtitle = signal('Subtitulo Rover');
+    title = signal('Proyecto Rover');
+    subtitle = signal('Subtitulo Rover');
 
-  ngAfterViewInit() {
-    const section = this.el.nativeElement.querySelector('.vision-banner');
+    ngAfterViewInit() {
+      const section = this.el.nativeElement.querySelector('.vision-banner');
 
-    if (!section) {
-      return;
+      if (!section) {
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            section.classList.add('visible');
+          } else {
+            section.classList.remove('visible');
+          }
+        },
+        { threshold: 0.3 },
+      );
+
+      observer.observe(section);
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          section.classList.add('visible');
-        } else {
-          section.classList.remove('visible');
-        }
+    features = signal([
+      {
+        title: 'Locomocion y chasis',
+        text: 'Diseña la estructura y el sistema de movilidad del rover, asegurando estabilidad, maniobrabilidad e integración mecánica con el resto de los subsistemas.',
       },
-      { threshold: 0.9 },
-    );
-
-    observer.observe(section);
+      {
+        title: 'Brazo manipulador y drilling',
+        text: 'Desarrolla el brazo robótico y el sistema de perforación para recolectar muestras, incluyendo su diseño, control e interacción con el terreno.',
+      },
+      {
+        title: 'Electronica y sistemas de potencia',
+        text: 'Se encarga de la energía, el control y la seguridad eléctrica del rover, integrando sensores, actuadores y sistemas de distribución de potencia.',
+      },
+      {
+        title: 'Telecomunicaciones',
+        text: 'Garantiza la comunicación entre el rover y la estación base, permitiendo el control remoto y la transmisión confiable de datos y telemetría.',
+      },
+      {
+        title: 'Software y autonomia',
+        text: 'Desarrolla el software del rover, incluyendo navegación, procesamiento de sensores y toma de decisiones para operación autónoma y teleoperada.',
+      },
+      {
+        title: 'Ciencia',
+        text: 'Define los objetivos científicos de la misión y diseña los instrumentos y procedimientos para recolectar, analizar y documentar datos del entorno.',
+      },
+      {
+        title: 'Dron',
+        text: 'Diseña e integra el dron que acompaña al rover, proporcionando visión aérea para navegación, detección de obstáculos y asistencia en la misión.',
+      },
+    ]);
   }
-
-  features = signal([
-    {
-      title: 'Locomocion y chasis',
-      text: 'Diseña la estructura y el sistema de movilidad del rover, asegurando estabilidad, maniobrabilidad e integración mecánica con el resto de los subsistemas.',
-    },
-    {
-      title: 'Brazo manipulador y drilling',
-      text: 'Desarrolla el brazo robótico y el sistema de perforación para recolectar muestras, incluyendo su diseño, control e interacción con el terreno.',
-    },
-    {
-      title: 'Electronica y sistemas de potencia',
-      text: 'Se encarga de la energía, el control y la seguridad eléctrica del rover, integrando sensores, actuadores y sistemas de distribución de potencia.',
-    },
-    {
-      title: 'Telecomunicaciones',
-      text: 'Garantiza la comunicación entre el rover y la estación base, permitiendo el control remoto y la transmisión confiable de datos y telemetría.',
-    },
-    {
-      title: 'Software y autonomia',
-      text: 'Desarrolla el software del rover, incluyendo navegación, procesamiento de sensores y toma de decisiones para operación autónoma y teleoperada.',
-    },
-    {
-      title: 'Ciencia',
-      text: 'Define los objetivos científicos de la misión y diseña los instrumentos y procedimientos para recolectar, analizar y documentar datos del entorno.',
-    },
-    {
-      title: 'Dron',
-      text: 'Diseña e integra el dron que acompaña al rover, proporcionando visión aérea para navegación, detección de obstáculos y asistencia en la misión.',
-    },
-  ]);
-}
