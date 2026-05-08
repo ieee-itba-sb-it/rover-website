@@ -26,12 +26,14 @@
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
+            // Activamos la animación
             section.classList.add('visible');
-          } else {
-            section.classList.remove('visible');
+
+            // Dejamos de observar la sección para que la animación no se apague al scrollear
+            observer.unobserve(section);
           }
         },
-        { threshold: 0.3 },
+        { threshold: 0.1 },
       );
 
       observer.observe(section);
