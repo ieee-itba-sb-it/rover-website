@@ -1,10 +1,7 @@
-/* --- Estilo Tecnológico para el Countdown --- */
-
+/*
 .countdown-wrapper {
   text-align: center;
-  padding: 20px;
   border-radius: 20px;
-  /* Fondo oscuro semitransparente para que no tape el Rover */
   background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -13,10 +10,8 @@
 
 .label p {
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 3px;
   margin-bottom: 25px;
-  color: #007ad9; /* Azul tecnológico */
-  font-size: 0.9rem;
+  color: #007ad9;
   font-weight: 700;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 122, 217, 0.5);
@@ -24,12 +19,10 @@
 
 .grid {
   display: flex;
-  gap: 20px;
   justify-content: center;
 }
 
 .unit {
-  /* Fondo oscuro tipo cristal */
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
@@ -40,7 +33,6 @@
   overflow: hidden;
 }
 
-/* Efecto de brillo al pasar el mouse */
 .unit:hover {
   background: rgba(0, 122, 217, 0.1);
   border-color: #007ad9;
@@ -55,20 +47,18 @@
   color: #ffffff;
   line-height: 1;
   margin-bottom: 5px;
-  /* Brillo en los números */
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .unit p {
   margin: 0;
   font-size: 0.65rem;
-  color: #94a3b8; /* Gris azulado claro */
+  color: #94a3b8;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-/* Decoración extra: pequeños bordes en las esquinas */
 .unit::before {
   content: '';
   position: absolute;
@@ -86,3 +76,4 @@
   color: rgba(255, 255, 255, 0.5);
   font-style: italic;
 }
+*/

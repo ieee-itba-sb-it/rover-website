@@ -1,11 +1,48 @@
-<div class="countdown-wrapper">
-  <div class="label">
-    <p> Cuenta regresiva para la competencia: </p>
+<div class="w-full max-w-[420px] md:max-w-[600px] mx-auto p-3.5 md:p-5 text-center rounded-[20px] bg-slate-900/40 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+
+  <div class="mb-4 md:mb-6">
+    <p class="font-['Orbitron'] text-[0.7rem] md:text-[0.9rem] tracking-[2px] md:tracking-[3px] text-[#007ad9] font-bold uppercase drop-shadow-[0_0_10px_rgba(0,122,217,0.5)] m-0">
+      Cuenta regresiva para la competencia:
+    </p>
   </div>
-  <div class="grid">
-    <div class="unit"><span>{{ days() }}</span><p>DÍAS</p></div>
-    <div class="unit"><span>{{ hours() }}</span><p>HORAS</p></div>
-    <div class="unit"><span>{{ minutes() }}</span><p>MINUTOS</p></div>
-    <div class="unit"><span>{{ seconds() }}</span><p>SEGUNDOS</p></div>
+
+  <div class="grid grid-cols-4 gap-2 md:gap-5 justify-center">
+
+    <div class="relative overflow-hidden flex flex-col items-center justify-center bg-white/5 border border-white/20 rounded-xl px-1 py-3 md:px-2.5 md:py-5 transition-all duration-300 ease-in-out hover:bg-[#007ad9]/10 hover:border-[#007ad9] hover:-translate-y-1.5 before:absolute before:top-0 before:left-0 before:w-2.5 before:h-2.5 before:border-t-2 before:border-l-2 before:border-[#007ad9]">
+      <span class="block font-['Orbitron'] text-2xl sm:text-3xl md:text-[3rem] font-bold text-white leading-none mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+        {{ days() }}
+      </span>
+      <p class="m-0 text-[0.5rem] md:text-[0.65rem] text-slate-400 font-semibold tracking-[1px] md:tracking-[2px] uppercase">
+        DÍAS
+      </p>
+    </div>
+
+    <div class="relative overflow-hidden flex flex-col items-center justify-center bg-white/5 border border-white/20 rounded-xl px-1 py-3 md:px-2.5 md:py-5 transition-all duration-300 ease-in-out hover:bg-[#007ad9]/10 hover:border-[#007ad9] hover:-translate-y-1.5 before:absolute before:top-0 before:left-0 before:w-2.5 before:h-2.5 before:border-t-2 before:border-l-2 before:border-[#007ad9]">
+      <span class="block font-['Orbitron'] text-2xl sm:text-3xl md:text-[3rem] font-bold text-white leading-none mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+        {{ hours() }}
+      </span>
+      <p class="m-0 text-[0.5rem] md:text-[0.65rem] text-slate-400 font-semibold tracking-[1px] md:tracking-[2px] uppercase">
+        HORAS
+      </p>
+    </div>
+
+    <div class="relative overflow-hidden flex flex-col items-center justify-center bg-white/5 border border-white/20 rounded-xl px-1 py-3 md:px-2.5 md:py-5 transition-all duration-300 ease-in-out hover:bg-[#007ad9]/10 hover:border-[#007ad9] hover:-translate-y-1.5 before:absolute before:top-0 before:left-0 before:w-2.5 before:h-2.5 before:border-t-2 before:border-l-2 before:border-[#007ad9]">
+      <span class="block font-['Orbitron'] text-2xl sm:text-3xl md:text-[3rem] font-bold text-white leading-none mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+        {{ minutes() }}
+      </span>
+      <p class="m-0 text-[0.5rem] md:text-[0.65rem] text-slate-400 font-semibold tracking-[1px] md:tracking-[2px] uppercase">
+        MINUTOS
+      </p>
+    </div>
+
+    <div class="relative overflow-hidden flex flex-col items-center justify-center bg-white/5 border border-white/20 rounded-xl px-1 py-3 md:px-2.5 md:py-5 transition-all duration-300 ease-in-out hover:bg-[#007ad9]/10 hover:border-[#007ad9] hover:-translate-y-1.5 before:absolute before:top-0 before:left-0 before:w-2.5 before:h-2.5 before:border-t-2 before:border-l-2 before:border-[#007ad9]">
+      <span class="block font-['Orbitron'] text-2xl sm:text-3xl md:text-[3rem] font-bold text-white leading-none mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+        {{ seconds() }}
+      </span>
+      <p class="m-0 text-[0.5rem] md:text-[0.65rem] text-slate-400 font-semibold tracking-[1px] md:tracking-[2px] uppercase">
+        SEGUNDOS
+      </p>
+    </div>
+
   </div>
 </div>
