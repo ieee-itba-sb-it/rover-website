@@ -2,15 +2,18 @@
 
   <div class="absolute inset-0 bg-black/55 md:bg-black/40 flex flex-col justify-center gap-6 text-center pt-16 pb-8 md:flex-row md:items-center md:justify-start md:text-left md:gap-0 md:p-0">
 
-    <div class="w-full flex flex-col items-center gap-2 px-6 md:px-0 md:block md:gap-0 md:ml-[8%] max-w-[90%] md:max-w-[700px] z-10 relative pointer-events-none">
-      <h1 class="font-['Orbitron'] text-[clamp(2.5rem,12vw,4rem)] md:text-[clamp(3rem,8vw,5rem)] font-bold leading-none m-0 text-white drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)] pointer-events-auto">
+    <div class="w-full flex flex-col items-center text-center gap-2 px-6 md:px-0 md:items-start md:text-left mx-auto md:mx-0 md:ml-[8%] max-w-[90%] md:max-w-[700px] z-20 relative">
+
+      <h1 class="w-full text-center md:text-left font-['Orbitron'] text-[clamp(2.5rem,12vw,4rem)] md:text-[clamp(3rem,8vw,5rem)] font-bold leading-none m-0 text-white drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)]">
         {{ title() }}
       </h1>
 
-      <img src="/assets/logo-negro.png" alt="Logo ITBA" class="w-[110px] md:w-[min(180px,40vw)] h-auto mt-2 mb-1 md:mt-2 md:mb-4 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-auto">
+      <img src="/assets/logo-negro.png"
+           alt="Logo ITBA"
+           class="w-[110px] md:w-[min(180px,40vw)] h-auto mt-2 mb-1 md:mt-2 md:mb-4 block mx-auto md:mx-0 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
 
       <button type="button"
-              class="mt-4 md:mt-6 px-6 py-3 min-w-[220px] md:w-auto md:px-10 md:py-4 text-base font-semibold text-white bg-transparent border-2 border-[#007ad9] rounded-full uppercase tracking-wider cursor-pointer transition-all duration-300 hover:bg-[#007ad9] hover:shadow-[0_0_25px_rgba(0,122,217,0.5)] hover:-translate-y-[3px] pointer-events-auto"
+              class="mt-4 md:mt-6 px-6 py-3 min-w-[220px] md:w-auto md:px-10 md:py-4 text-base font-semibold text-white bg-transparent border-2 border-[#007ad9] rounded-full uppercase tracking-wider cursor-pointer transition-all duration-300 hover:bg-[#007ad9] hover:shadow-[0_0_25px_rgba(0,122,217,0.5)] hover:-translate-y-[3px]"
               (click)="infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' })">
         Conocé más
       </button>
