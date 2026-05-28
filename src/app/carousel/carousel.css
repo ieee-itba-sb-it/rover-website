@@ -59,7 +59,7 @@
 
 .integrantes-list {
   margin-top: 1rem;
-  border-top: 1px dashed rgba(255, 255, 255, 0.3); /* Una línea sutil para separar */
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Una línea sutil para separar */
   padding-top: 0.8rem;
 }
 
@@ -80,4 +80,25 @@
 
 .integrantes-list li {
   margin-bottom: 0.25rem;
+}
+
+::ng-deep .p-carousel .p-carousel-content {
+  position: relative !important;
+}
+
+::ng-deep .p-carousel .p-carousel-prev,
+::ng-deep .p-carousel .p-carousel-next {
+  position: absolute !important;
+  top: 55px !important; /* Ajustá este valor para centrar la flecha con el título azul */
+  margin: 0 !important; /* Limpiamos márgenes nativos que puedan interferir */
+  transform: translateY(-50%) !important; /* Centra la flecha exactamente en el píxel 55 */
+  z-index: 10; /* Asegura que se puedan clickear si se superponen con algo */
+}
+
+::ng-deep .p-carousel .p-carousel-prev {
+  left: 0 !important; /* Podés usar un valor negativo ej: -20px si las querés más afuera */
+}
+
+::ng-deep .p-carousel .p-carousel-next {
+  right: 0 !important;
 }
