@@ -1,7 +1,8 @@
 .footer {
   background: #003566;
   color: #ffffff;
-  padding: 3rem 8%;
+  /* CAMBIO: Redujimos el padding de 3rem a 1.5rem */
+  padding: 1.5rem 8%;
   margin-top: 4rem;
   border-top: 1px solid rgba(0, 122, 217, 0.3);
 }
@@ -13,7 +14,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  /* CAMBIO: Redujimos la separación general de 2rem a 1.2rem */
+  gap: 1.2rem;
 }
 
 .footer-section {
@@ -22,9 +24,10 @@
 
 .footer-section h3 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* Un poquito más sutil */
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  /* CAMBIO: Redujimos el espacio debajo del título de 1.5rem a 0.8rem */
+  margin-bottom: 0.8rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -35,7 +38,8 @@
   margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 2.5rem;
+  /* CAMBIO: De 2.5rem a 2rem para compactar los íconos */
+  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -46,9 +50,10 @@
   gap: 0.5rem;
   color: #e9f3ff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
-  padding: 0.5rem 0;
+  /* CAMBIO: Menos espacio vertical al hacer hover o tap */
+  padding: 0.2rem 0;
 }
 
 .contact-link:hover {
@@ -57,7 +62,7 @@
 }
 
 .icon {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: inline-block;
   min-width: 24px;
 }
@@ -67,21 +72,22 @@
 }
 
 .footer-text {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #b8d4f1;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer {
-    padding: 2rem 5%;
+    /* CAMBIO: En móvil, el padding es súper finito */
+    padding: 1.2rem 5%;
   }
 
   .footer-content {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .footer-divider {
@@ -91,11 +97,14 @@
 
   .footer-section h3 {
     font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-list {
+    gap: 1.5rem;
   }
 
   .contact-link {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
-
-
