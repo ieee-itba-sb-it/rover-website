@@ -2,7 +2,7 @@
 
   <div class="absolute inset-0 bg-black/55 md:bg-black/40 flex flex-col justify-center gap-6 text-center pt-16 pb-8 lg:flex-row lg:items-center lg:justify-start lg:text-left lg:gap-0 lg:p-0">
 
-    <div class="w-full flex flex-col items-center text-center gap-2 px-6 lg:px-0 lg:items-start lg:text-left mx-auto lg:mx-0 lg:ml-[8%] max-w-[90%] lg:max-w-[700px] z-20 relative">
+    <div class="w-full flex flex-col items-center text-center gap-1 px-6 lg:px-0 lg:items-start lg:text-left mx-auto lg:mx-0 lg:ml-[8%] max-w-[90%] lg:max-w-[700px] z-20 relative">
 
       <h1 class="w-full text-center lg:text-left font-['Orbitron'] text-[clamp(2.3rem,10vw,3.8rem)] lg:text-[clamp(3rem,6vw,4.5rem)] font-bold leading-none m-0 text-white drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)]">
         {{ title() }}
@@ -10,10 +10,10 @@
 
       <img src="/assets/logo-negro.png"
            alt="Logo ITBA"
-           class="w-[160px] lg:w-[min(220px,40vw)] h-auto mt-1 mb-1 lg:mt-1 lg:mb-2 block mx-auto lg:mx-0 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+           class="w-[160px] lg:w-[min(220px,40vw)] h-auto m-0 block mx-auto lg:mx-0 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
 
       <button type="button"
-              class="mt-2 lg:mt-3 px-6 py-3 min-w-[220px] lg:w-auto lg:px-10 lg:py-4 text-base font-semibold text-white bg-transparent border-2 border-[#007ad9] rounded-full uppercase tracking-wider cursor-pointer transition-all duration-300 hover:bg-[#007ad9] hover:shadow-[0_0_25px_rgba(0,122,217,0.5)] hover:-translate-y-[3px]"
+              class="mt-1 px-6 py-3 min-w-[220px] lg:w-auto lg:px-10 lg:py-4 text-base font-semibold text-white bg-transparent border-2 border-[#007ad9] rounded-full uppercase tracking-wider cursor-pointer transition-all duration-300 hover:bg-[#007ad9] hover:shadow-[0_0_25px_rgba(0,122,217,0.5)] hover:-translate-y-[3px]"
               (click)="infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' })">
         Conocé más
       </button>

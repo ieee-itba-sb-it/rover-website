@@ -1,7 +1,6 @@
 .footer {
   background: #003566;
   color: #ffffff;
-  /* CAMBIO: Redujimos el padding de 3rem a 1.5rem */
   padding: 1.5rem 8%;
   margin-top: 4rem;
   border-top: 1px solid rgba(0, 122, 217, 0.3);
@@ -14,7 +13,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* CAMBIO: Redujimos la separación general de 2rem a 1.2rem */
   gap: 1.2rem;
 }
 
@@ -24,9 +22,8 @@
 
 .footer-section h3 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.1rem; /* Un poquito más sutil */
+  font-size: 1.1rem;
   font-weight: 700;
-  /* CAMBIO: Redujimos el espacio debajo del título de 1.5rem a 0.8rem */
   margin-bottom: 0.8rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -38,7 +35,6 @@
   margin: 0;
   display: flex;
   flex-direction: row;
-  /* CAMBIO: De 2.5rem a 2rem para compactar los íconos */
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
@@ -52,7 +48,6 @@
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  /* CAMBIO: Menos espacio vertical al hacer hover o tap */
   padding: 0.2rem 0;
 }
 
@@ -81,7 +76,6 @@
 /* Responsive */
 @media (max-width: 768px) {
   .footer {
-    /* CAMBIO: En móvil, el padding es súper finito */
     padding: 1.2rem 5%;
   }
 
