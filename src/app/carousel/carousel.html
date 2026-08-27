@@ -1,35 +1,26 @@
 <p-carousel
-  #myCarousel
   [value]="items()"
   [numVisible]="3"
   [numScroll]="1"
   [responsiveOptions]="responsiveOptions"
   [circular]="true"
-  [autoplayInterval]="3000">
+  [autoplayInterval]="3500">
 
   <ng-template let-item pTemplate="item">
-    <div class="area-card"
-         [class.expanded]="expandedCards().has(item.title)"
-         (click)="toggleCard(item.title)">
+    <div
+      class="area-card group"
+      (click)="scrollToArea(item.id)"
+      role="button"
+      tabindex="0"
+      [attr.aria-label]="'Ir a la sección de ' + item.title"
+      (keydown.enter)="scrollToArea(item.id)"
+      (keydown.space)="$event.preventDefault(); scrollToArea(item.id)">
 
       <div class="card-header">
         <h3 class="area-title">{{ item.title }}</h3>
-        <span class="toggle-icon">{{ expandedCards().has(item.title) ? '-' : '+' }}</span>
-      </div>
-
-      <div class="area-content">
-        <p>{{ item.text }}</p>
-
-        <div class="integrantes-list">
-          <h4>Integrantes:</h4>
-          <ul>
-            @for (integrante of item.integrantes; track $index) {
-              <li>{{ integrante }}</li>
-            }
-          </ul>
-        </div>
       </div>
 
     </div>
   </ng-template>
 </p-carousel>
+
